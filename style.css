@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins";
+  font-size: larger;
+}
+
+.slider {
+  position: relative;
+  top: 50px;
+  max-width: 500px;
+  height: 500px;
+  margin:  0 auto;
+  overflow: hidden
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s ease-in-out;
+  -webkit-transition: transform 1s ease-in-out;
+  -moz-transition: transform 1s ease-in-out;
+  -ms-transition: transform 1s ease-in-out;
+  -o-transition: transform 1s ease-in-out;
+}
+
+.slide > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  background: none;
+  border: none;
+
+}
+
+.btn-slide {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+
+  z-index: 1000;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.btn-slide>img{
+    width: 50px;
+    height: 50px;
+}
+.prev {
+  left: 3rem;
+  transform: translate(-50%, -50%);
+}
+.next {
+  right: 5rem;
+  transform: translate(50%, -50%);
+}
+.bubbles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top:3rem
+}
+.dot {
+  width: 15px;
+  height: 15px;
+  margin: 15px 5px;
+  border-radius:15px;
+  background: rgba(119, 117, 117, 0.342);
+  cursor: pointer;
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  -ms-border-radius:15px;
+  -o-border-radius:15px;
+}
+.dot.active {
+  background: #006eff;
+}
